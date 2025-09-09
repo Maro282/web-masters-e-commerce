@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- Font awesome -->
+  <link href="./css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="navbar.html">
+        <img src="tailor.png" alt="Logo" width="80" />
+      </a>
+
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Icons -->
+      <div class="d-flex align-items-center gap-3 order-lg-2 ms-2" id="userSection">
+        <!-- Search -->
+        <div class="position-relative search-container d-none">
+          <i class="fas fa-search fa-lg text-dark search-icon" style="cursor: pointer"></i>
+          <input type="text" class="form-control form-control-sm search-input" placeholder="Type to search..." />
+        </div>
+
+        <!-- Login / Logout -->
+        <a href="login.html" class="text-dark fw-semibold" id="loginBtn">Login</a>
+        <a href="#" class="text-dark fw-semibold d-none" id="logoutBtn">Logout</a>
+
+        <!-- Cart -->
+        <a href="cart.html" class="text-dark position-relative d-none" id="cartLink">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+        <ul class="navbar-nav mx-auto" id="navLinks"></ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/navbar.js" type="module"></script>
+</body>
+</html>

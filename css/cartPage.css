@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ====General===== */
+.cart-page-body {
+  background-color: #f8f9fa;
+}
+
+/* ==== cart page hedaer ==== */
+.cart-header {
+  background-color: #faeddf;
+  box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* ===== Handling item detail header ===== */
+.item-detail-haeder {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.item-detail-haeder div {
+  width: 100%;
+}
+
+/* ==== cart items ==== */
+.item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  align-items: center;
+  text-align: center;
+}
+
+.item p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item-pic-box {
+  width: 50px;
+  height: 50px;
+}
+
+.item-quantity input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  outline: none;
+}
+.item-quantity input:focus {
+  border: 1px solid black;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+#clear-cart {
+  background-color: red;
+  color: white !important;
+  border: 1px solid red;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#clear-cart:hover {
+  background-color: white;
+  color: red !important;
+  border: 1px solid red;
+}
+
+.remove-btn {
+  background-color: white;
+  border: 1px solid red;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: red !important;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: red;
+  color: white !important;
+}
+
+.checkout-area .btn-success {
+  font-size: 18px;
+  background-color: #00b894;
+  outline: none;
+  border: none;
+}
+
+.checkout-area .btn-success:hover {
+  background-color: #00a382;
+}
+
+.out-of-stock {
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .item-detail-haeder,
+  .item {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: start;
+  }
+
+  .item-name-pic {
+    grid-column: 1 / span 2;
+  }
+}

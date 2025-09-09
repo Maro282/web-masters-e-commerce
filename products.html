@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailor E-commerce</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/products.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="navbar.html">
+          <img src="./images/tailor.png" alt="Logo" width="80" />
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Icons -->
+        <div
+          class="d-flex align-items-center gap-3 order-lg-2 ms-2"
+          id="userSection"
+        >
+          <!-- Search -->
+          <div class="position-relative search-container">
+            <i
+              class="fas fa-search fa-lg text-dark search-icon"
+              style="cursor: pointer"
+            ></i>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control form-control-sm search-input"
+              placeholder="Type to search..."
+            />
+          </div>
+
+          <!-- Login / Logout -->
+          <a href="login.html" class="text-dark fw-semibold" id="loginBtn"
+            >Login</a
+          >
+          <a href="#" class="text-dark fw-semibold d-none" id="logoutBtn"
+            >Logout</a
+          >
+
+          <!-- Cart -->
+          <a href="./cartPage.html" class="text-dark position-relative">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cartCount"
+              >0</span
+            >
+          </a>
+        </div>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+          <ul class="navbar-nav mx-auto" id="navLinks"></ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- start products section  -->
+    <section class="products-section d-flex gap-2">
+      <div class="filter-box p-3">
+        <h3>Filter <i class="fa-solid fa-filter"></i></h3>
+        <form class="category-filter d-flex flex-column gap-4 my-4">
+          <div class="form-check p-0 d-flex align-items-center gap-2">
+            <input id="top" type="checkbox" name="category" value="tops" />
+            <label for="top">Top</label>
+          </div>
+          <div class="form-check p-0 d-flex align-items-center gap-2">
+            <input
+              id="bottom"
+              type="checkbox"
+              name="category"
+              value="bottoms"
+            />
+            <label for="bottom">Bottom</label>
+          </div>
+          <div class="form-check p-0 d-flex align-items-center gap-2">
+            <input id="suits" type="checkbox" name="category" value="suits" />
+            <label for="suits">Suits</label>
+          </div>
+          <div class="form-check p-0 d-flex align-items-center gap-2">
+            <input
+              id="wedding"
+              type="checkbox"
+              name="category"
+              value="wedding"
+            />
+            <label for="wedding">Wedding</label>
+          </div>
+          <button type="button" class="btn btn-secondary clear-filter">
+            Clear Filter
+          </button>
+        </form>
+      </div>
+      <div class="products-box p-3">
+        <div class="container">
+          <div class="row">
+            <!-- products will be added here -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end products section  -->
+
+    <!-- Footer -->
+    <footer
+      class="footer text-center text-white"
+      style="background-color: #515050"
+    >
+      <div class="cs p-4">
+        <div class="signup">
+          <section class="signup">
+            <form action="">
+              <div class="row d-flex justify-content-left flex-column">
+                <div class="col-auto">
+                  <p class="pt-10">
+                    <strong>SIGN UP AND SAVE</strong>
+                  </p>
+                </div>
+                <div class="col-auto">
+                  <p class="pt-2">
+                    Subscribe to get special offers, free giveaways, and
+                    once-in-a-lifetime deals.
+                  </p>
+                </div>
+                <div
+                  class="forms col-md-5 col-lg-12 d-flex justify-content-left"
+                >
+                  <div class="form-outline form-white mb-4">
+                    <input
+                      type="email"
+                      id="form5Example2"
+                      class="form-control"
+                      placeholder="Enter your Email"
+                    />
+                  </div>
+                  <button type="submit" class="btn mb-4">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+          <section class="socials mb-4">
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #55acee"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </section>
+        </div>
+        <section class="links">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 lists-div">
+              <h6 class="h6 text-uppercase">LOCATION</h6>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#">007,James bond street, London, England.</a></li>
+                <li><a href="#">Mon-Sat 10AM - 9PM</a></li>
+                <li><a href="#">Sun: Closed</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 lists-div">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#!">About</a></li>
+                <li><a href="#!">Faq</a></li>
+                <li><a href="#!">Services</a></li>
+                <li><a href="#!">Contact</a></li>
+                <li><a href="#!">Start or return an exchange</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 lists-div">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#!">Tailoring</a></li>
+                <li><a href="#!">Made to measure</a></li>
+                <li><a href="#!">Weddings</a></li>
+                <li><a href="#!">Made to order</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 lists-div">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#!">Order</a></li>
+                <li><a href="#!">Returns</a></li>
+                <li><a href="#!">Terms and conditions</a></li>
+                <li><a href="#!">Gifts</a></li>
+                <li><a href="#!">Refund Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/products.js" type="module"></script>
+  </body>
+</html>

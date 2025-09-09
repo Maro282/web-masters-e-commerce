@@ -1,0 +1,101 @@
+/*
+   Fix the footer layout for smaller screens.
+   The original code's flex-direction: row; was causing the issue.
+*/
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+  .cs {
+    flex-direction: column;
+  }
+  .footer .signup .row {
+    width: 100%;
+  }
+  .footer .lists-div {
+    margin-bottom: 20px;
+  }
+}
+
+/*footer start*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+}
+.footer .signup {
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+.footer .signup .row {
+  width: 50%;
+}
+.footer .signup .row .forms input {
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+  border-top: 10px;
+  border-left: 10px;
+  border-right: 10px;
+}
+.footer .signup .row .forms input::placeholder {
+  color: white;
+}
+.footer .signup .row .forms .btn {
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+  border-top: 10px;
+  border-left: 10px;
+  border-right: 10px;
+  border-color: white;
+}
+.footer .signup .row .forms .btn:hover {
+  color: var(--muted);
+}
+.footer .socials .btn {
+  background-color: transparent;
+  color: white;
+}
+.cs {
+  display: flex;
+}
+.links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.links ul a {
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+  transition: var(--transition);
+  color: var(--bg);
+}
+.links ul a:hover {
+  color: var(--secondary);
+}
+@media screen and (max-width: 1000px) {
+  .cs {
+    flex-direction: column;
+  }
+  .footer .signup .row {
+    width: 100%;
+  }
+  .footer {
+    width: 103%;
+  }
+  .sales {
+    width: 103%;
+  }
+  .navbar {
+    width: 103%;
+  }
+}
+/*end footer*/
