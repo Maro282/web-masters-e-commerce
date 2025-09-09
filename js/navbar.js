@@ -1,6 +1,7 @@
 // ================== Export ==================
-export let cartCounter = document.getElementById("cartCount");
+export const cartCounter = document.getElementById("cartCount");
 // ============================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
   const loginBtn = document.getElementById("loginBtn");
@@ -18,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       if (loggedIn === "true") {
         navLinks.innerHTML = `
-          <li class="nav-item"><a class="nav-link custom-link" href="./products.html">PRODUCTS</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="index.html">PRODUCTS</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="shop.html">SHOP</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="weddings.html">WEDDINGS</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="features.html" id="featuresLink">FEATURES</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="services.html">SERVICES</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="contact.html">CONTACT</a></li>
         `;
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Login / Logout buttons + Show/Hide search & cart
+  // Login / Logout 
   if (loggedIn === "true") {
     if (loginBtn) loginBtn.classList.add("d-none");
     if (logoutBtn) logoutBtn.classList.remove("d-none");
@@ -80,11 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const passwordInput = document.getElementById("password").value;
 
       const storedUser = JSON.parse(localStorage.getItem("userData"));
-      if (
-        storedUser &&
-        emailInput === storedUser.email &&
-        passwordInput === storedUser.password
-      ) {
+      if (storedUser && emailInput === storedUser.email && passwordInput === storedUser.password) {
         localStorage.setItem("loggedIn", "true");
         alert("Login successful!");
         window.location.href = "index.html";
@@ -113,11 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const userData = {
-        username: newUsername,
-        email: newEmail,
-        password: newPassword,
-      };
+      const userData = { username: newUsername, email: newEmail, password: newPassword };
       localStorage.setItem("userData", JSON.stringify(userData));
       alert("Registration successful! Please login.");
       window.location.href = "login.html";
@@ -131,6 +125,41 @@ document.addEventListener("DOMContentLoaded", () => {
       searchContainer.classList.toggle("active");
       const input = searchContainer.querySelector(".search-input");
       if (input) input.focus();
+    });
+  }
+
+  // Add to Cart
+  window.addToCart = function (productId) {
+    if (localStorage.getItem("loggedIn") === "true") {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(productId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      
+      if (cartCounter) cartCounter.textContent = cart.length;
+
+      alert("Item added to cart!");
+    } else {
+      alert("Please login first!");
+      window.location.href = "login.html";
+    }
+  };
+
+  
+  if (loggedIn === "true" && cartCounter) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartCounter.textContent = cart.length;
+  }
+
+  
+  const featuresLink = document.getElementById("featuresLink");
+  if (featuresLink) {
+    featuresLink.addEventListener("click", (e) => {
+      if (localStorage.getItem("loggedIn") !== "true") {
+        e.preventDefault();
+        alert("You must login first!");
+        window.location.href = "login.html";
+      }
     });
   }
 });
