@@ -51,7 +51,7 @@ html, body {
 
 /* hero section */
 .hero-section {
-    background: url("../imgs/bg-image.png") no-repeat center center/cover;
+    background: url("../images/bg-image.png") no-repeat center center/cover;
     height: 100vh;
 }
 .hero-text {
