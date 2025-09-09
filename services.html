@@ -14,10 +14,12 @@
   <body>
     <nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
       <div class="container">
+        <!-- Logo -->
         <a class="navbar-brand" href="navbar.html">
           <img src="./images/tailor.png" alt="Logo" width="80" />
         </a>
 
+        <!-- Toggler -->
         <button
           class="navbar-toggler"
           type="button"
@@ -25,29 +27,50 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="d-flex align-items-center gap-3 order-lg-2 ms-2" id="userSection">
+        <!-- Icons -->
+        <div
+          class="d-flex align-items-center gap-3 order-lg-2 ms-2"
+          id="userSection"
+        >
+          <!-- Search -->
           <div class="position-relative search-container">
-            <i class="fas fa-search fa-lg text-dark search-icon" style="cursor: pointer"></i>
+            <i
+              class="fas fa-search fa-lg text-dark search-icon"
+              style="cursor: pointer"
+            ></i>
             <input
               type="text"
               id="searchInput"
               class="form-control form-control-sm search-input"
-              placeholder="Type to search..." />
+              placeholder="Type to search..."
+            />
           </div>
 
-          <a href="login.html" class="text-dark fw-semibold" id="loginBtn">Login</a>
-          <a href="#" class="text-dark fw-semibold d-none" id="logoutBtn">Logout</a>
+          <!-- Login / Logout -->
+          <a href="login.html" class="text-dark fw-semibold" id="loginBtn"
+            >Login</a
+          >
+          <a href="#" class="text-dark fw-semibold d-none" id="logoutBtn"
+            >Logout</a
+          >
 
-          <a href="#" class="text-dark position-relative">
+          <!-- Cart -->
+          <a href="./cartPage.html" class="text-dark position-relative">
             <i class="fas fa-shopping-cart fa-lg"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cartCount"
+              >0</span
+            >
           </a>
         </div>
 
+        <!-- Links -->
         <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
           <ul class="navbar-nav mx-auto" id="navLinks"></ul>
         </div>
@@ -65,8 +88,9 @@
 
     <section class="intro container">
       <p>
-        Stop by our store to experience all we have to offer: tailoring & alterations,
-        made-to-measure, bespoke, and made-to-order. Design your perfect wardrobe today!
+        Stop by our store to experience all we have to offer: tailoring &
+        alterations, made-to-measure, bespoke, and made-to-order. Design your
+        perfect wardrobe today!
       </p>
     </section>
 
@@ -75,8 +99,9 @@
         <img src="./images/pic2.png" alt="Tailoring & Alteration" />
         <h3>Tailoring & Alteration</h3>
         <p>
-          We pride ourselves on our high-end style of tailoring. We offer alterations for both men and
-          women in formal traditional garments as well as casual wear.
+          We pride ourselves on our high-end style of tailoring. We offer
+          alterations for both men and women in formal traditional garments as
+          well as casual wear.
         </p>
         <a href="#" class="btn-pill">Know More</a>
       </article>
@@ -85,8 +110,9 @@
         <img src="./images/pic3.png" alt="Made-to-Measure" />
         <h3>Made-to-Measure</h3>
         <p>
-          Made-to-measure is a custom based on our exclusive fitting block. With this try-on, we use
-          35 distinct measurements to ensure you are designing a garment with a remarkable fit!
+          Made-to-measure is a custom based on our exclusive fitting block. With
+          this try-on, we use 35 distinct measurements to ensure you are
+          designing a garment with a remarkable fit!
         </p>
         <a href="#" class="btn-pill">Know More</a>
       </article>
@@ -97,16 +123,20 @@
         <img src="./images/pic4.png" alt="Made-to-Order" />
         <h3>Made-to-Order</h3>
         <p>
-          This is our small batch production made just for you. We give you a range of custom design
-          options for a specific garment (colors, buttons, style, etc), and once ordered, we begin
-          working on it immediately.
+          This is our small batch production made just for you. We give you a
+          range of custom design options for a specific garment (colors,
+          buttons, style, etc), and once ordered, we begin working on it
+          immediately.
         </p>
         <a href="#" class="btn-pill">Know More</a>
       </article>
     </section>
     <!-- ===== /Services content ===== -->
 
-    <footer class="footer text-center text-white" style="background-color: #515050">
+    <footer
+      class="footer text-center text-white"
+      style="background-color: #515050"
+    >
       <div class="cs p-4">
         <div class="signup">
           <section class="signup">
@@ -117,16 +147,20 @@
                 </div>
                 <div class="col-auto">
                   <p class="pt-2">
-                    Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
+                    Subscribe to get special offers, free giveaways, and
+                    once-in-a-lifetime deals.
                   </p>
                 </div>
-                <div class="forms col-md-5 col-lg-12 d-flex justify-content-left">
+                <div
+                  class="forms col-md-5 col-lg-12 d-flex justify-content-left"
+                >
                   <div class="form-outline form-white mb-4">
                     <input
                       type="email"
                       id="form5Example2"
                       class="form-control"
-                      placeholder="Enter your Email" />
+                      placeholder="Enter your Email"
+                    />
                   </div>
                   <button type="submit" class="btn mb-4">
                     <i class="fa-solid fa-envelope-circle-check"></i>
@@ -136,13 +170,28 @@
             </form>
           </section>
           <section class="socials mb-4">
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button">
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+            >
               <i class="fab fa-instagram"></i>
             </a>
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button">
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button">
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #55acee"
+              href="#!"
+              role="button"
+            >
               <i class="fab fa-twitter"></i>
             </a>
           </section>
@@ -189,7 +238,7 @@
     </footer>
 
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/navbar.js"></script>
-    <script src="./js/services.js"></script>
+    <script src="./js/navbar.js" type="module"></script>
+    <script src="./js/services.js" type="module"></script>
   </body>
 </html>

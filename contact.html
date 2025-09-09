@@ -27,7 +27,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="navbar.html">
-          <img src="./images/tailor.png" alt="Logo" width="80" />
+          <img src="images/tailor.png" alt="Logo" width="80" />
         </a>
 
         <!-- Toggler -->
@@ -49,14 +49,13 @@
           id="userSection"
         >
           <!-- Search -->
-          <div class="position-relative search-container">
+          <div class="position-relative search-container d-none">
             <i
               class="fas fa-search fa-lg text-dark search-icon"
               style="cursor: pointer"
             ></i>
             <input
               type="text"
-              id="searchInput"
               class="form-control form-control-sm search-input"
               placeholder="Type to search..."
             />
@@ -71,7 +70,11 @@
           >
 
           <!-- Cart -->
-          <a href="#" class="text-dark position-relative">
+          <a
+            href="cart.html"
+            class="text-dark position-relative d-none"
+            id="cartLink"
+          >
             <i class="fas fa-shopping-cart fa-lg"></i>
             <span
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -87,7 +90,7 @@
         </div>
       </div>
     </nav>
-    <script src="navbar.js"></script>
+
     <!--end navbar-->
 
     <section class="news container py-5">
@@ -256,5 +259,7 @@
       </div>
     </footer>
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/navbar.js" type="module"></script>
+    <script src="./js/contact.js" type="module"></script>
   </body>
 </html>

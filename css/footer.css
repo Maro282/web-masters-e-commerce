@@ -2,6 +2,7 @@
    Fix the footer layout for smaller screens.
    The original code's flex-direction: row; was causing the issue.
 */
+
 @media screen and (max-width: 1000px) {
   body {
     flex-direction: column;
@@ -22,6 +23,17 @@
 }
 
 /*footer start*/
+.footer .btn{
+  width: 15%;
+  height: 10%;
+  border-color: black;
+}
+.footer .btn:hover{
+  border-color: blue;
+}
+.footer a:hover{
+  color: var(--secondary);
+}
 .footer {
   display: flex;
   flex-direction: row;

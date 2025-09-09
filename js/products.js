@@ -1,7 +1,9 @@
 // ====================== Marwan ===================
 import { addProduct } from "./storage.js";
+
 // ====================== End Marwan====================
 
+import { cartCounter } from "./navbar.js";
 import { productsData } from "./productsData.js";
 // console.log(productsData);
 const categoryFilter = document.querySelector(".category-filter");

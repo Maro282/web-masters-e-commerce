@@ -1,7 +1,6 @@
 // ================== Export ==================
-export const cartCounter = document.getElementById("cartCount");
+export let cartCounter = document.getElementById("cartCount");
 // ============================================
-
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
   const loginBtn = document.getElementById("loginBtn");
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       if (loggedIn === "true") {
         navLinks.innerHTML = `
-          <li class="nav-item"><a class="nav-link custom-link" href="index.html">PRODUCTS</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="./products.html">PRODUCTS</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="shop.html">SHOP</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="weddings.html">WEDDINGS</a></li>
           <li class="nav-item"><a class="nav-link custom-link" href="services.html">SERVICES</a></li>
@@ -81,7 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const passwordInput = document.getElementById("password").value;
 
       const storedUser = JSON.parse(localStorage.getItem("userData"));
-      if (storedUser && emailInput === storedUser.email && passwordInput === storedUser.password) {
+      if (
+        storedUser &&
+        emailInput === storedUser.email &&
+        passwordInput === storedUser.password
+      ) {
         localStorage.setItem("loggedIn", "true");
         alert("Login successful!");
         window.location.href = "index.html";
@@ -110,7 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const userData = { username: newUsername, email: newEmail, password: newPassword };
+      const userData = {
+        username: newUsername,
+        email: newEmail,
+        password: newPassword,
+      };
       localStorage.setItem("userData", JSON.stringify(userData));
       alert("Registration successful! Please login.");
       window.location.href = "login.html";
